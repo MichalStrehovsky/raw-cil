@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.IL">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <EnableDefaultItems>false</EnableDefaultItems>
+
+    <!--
+      Do not generate the native CorDllMain entrypoint that was used to bootstrap
+      the .NET runtime circa Windows 98.
+    -->
+    <IlasmFlags>-NOCORSTUB</IlasmFlags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="fire.il" />
+  </ItemGroup>
+</Project>

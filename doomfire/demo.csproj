@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>x64</Platforms>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="program.cs" />
+    <Compile Include="sokol-interop.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="fire.ilproj" />
+    <Content Include="sokol.dll" CopyToOutputDirectory="Always" />
+    <Content Include="libsokol.so" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+</Project>
